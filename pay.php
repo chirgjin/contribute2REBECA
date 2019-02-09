@@ -2,10 +2,10 @@
   //This script receives data from front end and processes it to the instamojo payment gateway
 
   $product_name = "REBECA 2018 Collection";  //$_GET["product_name"];
-  $price = $_GET["amount"];
-  $name = $_GET["name"];
-  $phone = $_GET["phone"];
-  $email = $_GET["email"];
+  $price = addslashes($_GET["amount"]);
+  $name = addslashes($_GET["name"]);
+  $phone = addslashes($_GET["phone"]);
+  $email = addslashes($_GET["email"]);
 
 
   include 'src/instamojo.php';
